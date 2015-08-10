@@ -1,1 +1,0 @@
-MESSAGE = {'default': 'Hello World!'}

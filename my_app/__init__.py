@@ -1,7 +1,8 @@
 from flask import Flask
+import configuration
 
 app = Flask(__name__)
-DEBUG = True
+app.config.from_object(configuration.DevelopmentConfig)
 
-from my_app.raots import views
-from my_app.raots import models
+from my_app.app_one import views
+from my_app.app_one import models

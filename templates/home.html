@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
 {% block container %}
-
     <div class="top-pad">
-        {% for id, product in products.iteritems %}
+        {% for id, product in products.items() %}
             <div class="well">
                 <h2>
                     <a href="{{ url_for('product.product', key=id) }}">{{ product['name'] }}</a>
@@ -11,5 +10,4 @@
             </div>
         {% endfor %}
     </div>
-
 {% endblock %}
